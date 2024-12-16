@@ -484,6 +484,9 @@ def _generate_beam_search(
     # history of token score
     score_history = None
 
+    # fix input_ids type
+    input_ids = input_ids.long()
+
     while cur_len < max_length:
         model_inputs = self.prepare_inputs_for_generation(
             input_ids, past=past, attention_mask=attention_mask, use_cache=use_cache, **model_specific_kwargs

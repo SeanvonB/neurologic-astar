@@ -1,17 +1,33 @@
 # Neurologic A*esque Decoding
 
-This is the official repo for the paper ["NeuroLogic A*esque Decoding: Constrained Text Generation with Lookahead Heuristics"](https://aclanthology.org/2022.naacl-main.57/) (NAACL 2022)
+This is a fork of the official repo for the paper ["NeuroLogic A*esque Decoding: Constrained Text Generation with Lookahead Heuristics"](https://aclanthology.org/2022.naacl-main.57/) (NAACL 2022).
 
-## Requirement
-We suggest using conda to setup environment. With conda installed, create new environment:
+## Updated Installation Order
+
+As of 12.15.2024, the following steps should restore the original codebase to working order for anyone trying to reproduce the results reported by the original paper. Minor fixes were needed due to using Windows and/or the passage of time.
+
+Python 3.7
 ```
-conda create -n hug python=3.7
-conda activate hug
-pip install -r huggingface.txt
+conda create -n astar python=3.7
+conda activate astar
+```
+
+PyTorch 1.7.0
+```
+# Linux & Windows - NO PIP WHEEL ANYMORE
+conda install pytorch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 cudatoolkit=11.0 -c pytorch
+
+# Mac
+pip install torch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0
+```
+
+Requirements
+```
+pip install -r requirements.txt
 ```
 
 ## Citation
-If you use this codebase in your work, please consider citing our paper:
+If you use this codebase in your work, please consider citing the original paper:
 ```
 @inproceedings{lu-etal-2022-neurologic,
     title = "{N}euro{L}ogic A*esque Decoding: Constrained Text Generation with Lookahead Heuristics",
@@ -39,4 +55,3 @@ If you use this codebase in your work, please consider citing our paper:
 }
 
 ```
-

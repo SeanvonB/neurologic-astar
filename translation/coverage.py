@@ -8,7 +8,7 @@ if __name__ == '__main__':
     parser.add_argument("--input_file", type=str, required=True,
                         help='raw generated file to evaluate')
     parser.add_argument("--constraint_file", type=str,
-                        default='machine_translation/iate/iate.414.terminology.tsv')
+                        default="./dataset/machine_translation/iate/iate.414.terminology.tsv")
 
     args = parser.parse_args()
 
